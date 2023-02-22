@@ -8,6 +8,7 @@ import { Youtube_Search_API } from "../utils/Constant";
 import { RiVideoAddLine } from "react-icons/ri";
 import { CiSearch } from "react-icons/ci";
 import { cacheResults } from "../utils/searchSlice";
+import {MdOutlineMic} from 'react-icons/md'
 
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -107,6 +108,7 @@ const Head = () => {
           <button className="border border-gray-500 rounded-r-full px-5">
             <CiSearch className="cursor-pointer" size={20} />
           </button>
+          <MdOutlineMic className="cursor-pointer ml-3" size={30}/>
         </div>
         {showSuggestions && (
           <div className="w-[43vw]">
