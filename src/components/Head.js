@@ -114,7 +114,7 @@ const Head = () => {
           <div className="w-[43vw]">
             {suggestions.map((suggestion) => (
               <li
-                className="sticky ml-20 pl-5 gap-2 bg-white flex flex-row list-none shadow-lg hover:bg-gray-300"
+                className="sticky ml-20 pl-5 gap-2 bg-white flex flex-row list-none shadow-xl hover:bg-gray-300"
                 key={suggestion}
               >
                 <CiSearch className="mt-1" size={20} />
