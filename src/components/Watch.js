@@ -12,7 +12,7 @@ import CommentsContainer from "./CommentsContainer";
 
 const Watch = () => {
   const [searchParams] = useSearchParams();
-  
+
   // console.log(searchParams.get("v"));
   const Vid_URL = "https://www.youtube.com/embed/" + searchParams.get("v");
   console.log(Vid_URL);
@@ -25,7 +25,7 @@ const Watch = () => {
     <div>
       <iframe
         className="pl-7"
-        width="1250"
+        width="900"
         height="500"
         src={Vid_URL}
         title="YouTube video player"
@@ -44,30 +44,39 @@ const Watch = () => {
             Join
           </buntton>
         </div>
-        <div className="flex flex-row gap-10 mr-7">
-          <BiLike
-            className="mt-3 cursor-pointer hover:scale-110 transition-all"
-            size={30}
-          />
-          <BiDislike
-            className="mt-3 cursor-pointer hover:scale-110 transition-all"
-            size={30}
-          />
-          <RiShareForwardLine
-            className="mt-3 cursor-pointer hover:scale-110 transition-all"
-            size={30}
-          />
+        <div className="flex w-[700px] flex-row gap-10">
+          <button >
+            <BiLike
+              className="mt-3 cursor-pointer hover:scale-110 transition-all"
+              size={30}
+              
+            />
+          </button>
+          <button>
+            <BiDislike
+              className="mt-3 cursor-pointer hover:scale-110 transition-all"
+              size={30}
+            />
+          </button>
+          <button>
+            <RiShareForwardLine
+              className="mt-3 cursor-pointer hover:scale-110 transition-all"
+              size={30}
+            />
+          </button>
           <BsDownload
             className="mt-3 cursor-pointer hover:scale-110 transition-all"
             size={30}
           />
-          <AiOutlineDollar
-            className="mt-3 cursor-pointer hover:scale-110 transition-all"
-            size={30}
-          />
+          <button>
+            <AiOutlineDollar
+              className="mt-3 cursor-pointer hover:scale-110 transition-all"
+              size={30}
+            />
+          </button>
         </div>
       </div>
-      <CommentsContainer/>
+      <CommentsContainer />
     </div>
   );
 };

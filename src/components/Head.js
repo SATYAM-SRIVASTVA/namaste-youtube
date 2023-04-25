@@ -61,8 +61,12 @@ const Head = () => {
    */
 
   const getSearchSuggestions = async () => {
+    const myInit = {
+      method: 'HEAD',
+      mode: 'no-cors',
+    };
     console.log("api call"+searchQuery)
-    const data = await fetch(Youtube_Search_API + searchQuery);
+    const data = await fetch(Youtube_Search_API + searchQuery,myInit);
     const json = await data.json();
     // console.log(json[1]);
     setSuggestions(json[1]);

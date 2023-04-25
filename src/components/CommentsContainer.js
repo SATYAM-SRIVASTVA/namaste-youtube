@@ -483,7 +483,7 @@ const Comment = ({ data }) => {
   return (
     <div className="flex flex-row pt-2 my-2 shadow-lg bg-gray-200">
       <div className="ml-7">
-        <FaUserCircle size={25} />
+        <FaUserCircle size={25} color={"#ff0000"} />
       </div>
       <div className="px-3">
         <p className="font-bold">{name}</p>
